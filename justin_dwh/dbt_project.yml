@@ -34,4 +34,10 @@ models:
   justin_dwh:
     # Config indicated by + and applies to all files under models/example/
     example:
-      +materialized: view
+      +materialized: table
+    base:
+      +materialized: table
+    staging:
+      +materialized: table
+    marts:
+      +materialized: table  

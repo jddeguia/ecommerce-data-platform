@@ -8,7 +8,6 @@ class KaggleDatasetHandler:
     def download_csv_from_kaggle(self, dataset_url):
         od.download(dataset_url, force=True)
 
-
 def main():
     dataset_url = "https://www.kaggle.com/datasets/aliessamali/ecommerce"
     kaggle_dataset_handler = KaggleDatasetHandler()

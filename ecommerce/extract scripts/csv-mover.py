@@ -49,7 +49,7 @@ class CsvFileCopier:
 
 # Example usage:
 source_directory = r"C:\Users\GL65\Desktop\Worker\ECommercePlatform\ecommerce-data-platform\ecommerce"
-destination_directory = r"C:\Users\GL65\Desktop\Worker\ECommercePlatform\ecommerce-data-platform\ecommerce\output"
+destination_directory = r"C:\Users\GL65\Desktop\Worker\ECommercePlatform\ecommerce-data-platform\ecommerce\csv to table"
 
 copier = CsvFileCopier(source_directory, destination_directory)
 copier.copy_csv_files()

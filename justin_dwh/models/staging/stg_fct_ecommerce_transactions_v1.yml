@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_fct_ecommerce_transactions_v1
+    description: Cleaned fact table for ecommerce transactions
+    columns:
+      - name: CustomerID
+        description: The unique identifier for each customer
+        tests:
+          - unique
+      - name: InvoiceNo
+        description: The unique identifier for each transaction.
+        tests:
+          - not_null
+      - name: StockCode
+        description: The unique identifer for each product
+        tests:
+          - not_null
+      - name: Quantity
+        description: Number of units of a certain product per transactions.
+      - name: InvoiceDate
+        description: Date of the transaction
+      - name: UnitPrice
+        description: The price of the product
+      - name: Country
+        description: Country of the customer
+      - name: Transaction Status
+        description: Status of the transaction made

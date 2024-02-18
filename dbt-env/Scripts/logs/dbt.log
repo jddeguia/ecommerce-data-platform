@@ -53,3 +53,17 @@
 [0m15:45:26.350155 [debug] [MainThread]: Connection 'debug' was properly closed.
 [0m15:45:26.351155 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002259FE62810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002259FE62870>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225A0221250>]}
 [0m15:45:26.352157 [debug] [MainThread]: Flushing usage events
+[0m22:36:44.872721 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021C50F30CB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021C50F31F70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021C50F305F0>]}
+
+
+============================== 22:36:44.877121 | f11a904d-4145-44d1-aa4f-dc460204b8a3 ==============================
+[0m22:36:44.877121 [info ] [MainThread]: Running with dbt=1.7.8
+[0m22:36:44.878121 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\GL65\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run -s +stg_fct_ecommerce_transactions_cleaned_v1', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:36:44.879121 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\GL65\Desktop\Worker\ECommercePlatform\ecommerce-data-platform\dbt-env\Scripts\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m22:36:44.880081 [debug] [MainThread]: Command `dbt run` failed at 22:36:44.880081 after 0.08 seconds
+[0m22:36:44.881088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021C4FC7E9F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021C50D7EB70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021C50D7C830>]}
+[0m22:36:44.882087 [debug] [MainThread]: Flushing usage events

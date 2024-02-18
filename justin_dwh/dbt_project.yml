@@ -33,11 +33,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   justin_dwh:
     # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: table
     base:
       +materialized: table
     staging:
       +materialized: table
     marts:
       +materialized: table  
+
+vars:
+  from_date: "2021-09-23"
+  to_date: "2021-09-30"
+  

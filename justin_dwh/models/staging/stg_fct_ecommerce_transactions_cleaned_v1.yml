@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stg_fct_ecommerce_transactions_cleaned_v1
+  - name: stg_fct_ecommerce_transactions_v1
     description: Cleaned fact table for ecommerce transactions
     columns:
       - name: CustomerID
@@ -24,3 +24,5 @@ models:
         description: The price of the product
       - name: Country
         description: Country of the customer
+      - name: Transaction Status
+        description: Status of the transaction made

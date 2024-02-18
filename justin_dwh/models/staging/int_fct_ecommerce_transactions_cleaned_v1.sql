@@ -10,10 +10,6 @@ WITH remove_missing_customer_id AS (
         CAST(InvoiceDate AS DATE) AS InvoiceDate,
     FROM ecommerce_transactions
     WHERE CustomerID IS NOT NULL
-    
-    {%- if is_incremental() %}
-    AND CAST(InvoiceDate AS DATE) BETWEEN CAST('{{ var("from_date") }}' AS DATE) AND CAST('{{ var("to_date") }}' AS DATE)
-    {%- endif %}
 ),
 
 remove_null_description AS (

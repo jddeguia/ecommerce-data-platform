@@ -1,3 +1,15 @@
+/*
+    Table:
+        mart_dim_customers_behavior
+    
+    Authors:
+        Justin de Guia (JG)
+    
+    Description & Comments:
+        Dimension table for customer's purchase behavior
+        
+*/
+
 {% set partitions_to_replace = dates_in_range(
     start_date_str=var("from_date"),
     end_date_str=var("to_date"),

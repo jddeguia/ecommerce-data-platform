@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: mart_dim_customers_recency
-    description: Dimenstion table for recency of customer's engagement r
+    description: Dimenstion table for recency of customer's engagement 
     columns:
       - name: CustomerID
         description: The unique identifier for each customer

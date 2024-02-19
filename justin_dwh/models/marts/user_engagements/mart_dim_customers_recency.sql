@@ -1,3 +1,15 @@
+/*
+    Table:
+        mart_dim_customers_recency
+    
+    Authors:
+        Justin de Guia (JG)
+    
+    Description & Comments:
+        Dimenstion table for recency of customer's engagement
+        
+*/
+
 {% set partitions_to_replace = dates_in_range(
     start_date_str=var("from_date"),
     end_date_str=var("to_date"),

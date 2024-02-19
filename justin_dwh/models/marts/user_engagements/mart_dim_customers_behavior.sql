@@ -45,9 +45,8 @@ WITH base AS (
 days_between_purchases AS (
     SELECT
         CustomerID,
-        AVG(DATE_DIFF('day',InvoiceDate,PreviousTransactionDate)) AS AverageDaysBetweenPurchases
+        DATE_DIFF('day',InvoiceDate,PreviousTransactionDate) AS DaysBetweenPurchases
     FROM base
-    GROUP BY CustomerID
 ),
 
 favorite_shopping_day AS (
@@ -82,10 +81,11 @@ favorite_shopping_hour AS (
 
 SELECT
     b.CustomerId,
-    AverageDaysBetweenPurchases AS ADBP,
-    s.DayOfWeek AS FavoriteShoppingDay,
-    h.TransactionHour AS FavoriteShoppingHour
+    AVG(DaysBetweenPurchases) AS ADBP,
+    MAX(s.DayOfWeek) AS FavoriteShoppingDay,
+    MAX(h.TransactionHour) AS FavoriteShoppingHour
 FROM base b
 INNER JOIN days_between_purchases d USING (CustomerID)
 INNER JOIN favorite_shopping_day s USING (CustomerID)
 INNER JOIN favorite_shopping_hour h USING (CustomerID)
+GROUP BY CustomerID

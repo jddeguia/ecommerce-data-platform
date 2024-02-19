@@ -20,7 +20,7 @@
 }}
 
 WITH base AS (
-    SELECT * 
+    SELECT * EXCLUDE (row_num)
     FROM {{ ref('int_fct_ecommerce_transactions_cleaned_v1') }}
     
     {%- if is_incremental() %}

@@ -35,7 +35,7 @@ WITH base AS (
     SELECT * ,
     dayofweek(InvoiceDatetime) AS DayofWeek,
     hour(InvoiceDatetime) AS TransactionHour,
-    LAG(InvoiceDate) OVER (PARTITION BY CustomerID ORDER BY InvoiceDate) AS PreviousTransactionDate
+    LAG(InvoiceDate) OVER (PARTITION BY InvoiceNo,CustomerID ORDER BY InvoiceDate) AS PreviousTransactionDate
     FROM {{ ref('stg_fct_ecommerce_transactions_v1') }}
     {%- if is_incremental() %}
     WHERE InvoiceDate BETWEEN '{{ var("from_date") }}'AND '{{ var("to_date") }}'

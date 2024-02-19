@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: mart_dim_customers_behavior
+    description: Dimension table for customer's purchase behavior
+    columns:
+      - name: CustomerID
+        description: The unique identifier for each customer
+        tests:
+          - unique
+      - name: ADBP
+        description: Average days between purchases for each customer
+      - name: FavoriteShoppingDay
+        description: Favorite shopping day for each customer
+      - name: FavoriteShoppingHour
+        description: Favorite shopping hour for each customer

@@ -8,6 +8,7 @@
 WITH remove_missing_customer_id AS (
     SELECT * EXCLUDE (InvoiceDate),
         CAST(InvoiceDate AS DATE) AS InvoiceDate,
+        InvoiceDate AS InvoiceDatetime
     FROM ecommerce_transactions
     WHERE CustomerID IS NOT NULL
 ),

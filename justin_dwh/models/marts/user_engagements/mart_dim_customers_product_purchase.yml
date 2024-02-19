@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: mart_dim_customers_product_purchase
+    description: Dimension table for customer's product purchase
+    columns:
+      - name: CustomerID
+        description: The unique identifier for each customer
+        tests:
+          - unique
+      - name: total_transactions
+        description: Total number of transactions for each customer
+      - name: total_products_purchased
+        description: Total number of products purchased by each customer
+      - name: unique_products_purchased
+        description: Total number of unique products purchased by each customer
+      - name: total_spending
+        description: Total spending by each customer
+      - name: InvoiceDate
+        description: Date of the invoice
+      
